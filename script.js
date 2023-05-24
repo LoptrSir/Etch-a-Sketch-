@@ -1,4 +1,4 @@
-let gridInput = 'How large would you like the grid. /nLimit 100';
+let gridInput = 'How large would you like the grid. /nLimit 100'; //create this as a prompt after button is clicked
 let btnClicked = false;
 let gridSize = 16;
 let loop = 0;
@@ -21,11 +21,4 @@ function createGrid() {
     }
 }
 
-function sizeButton() {
-    if (btnClicked) {
-        console.log(gridSize);
 
-    }
-}
-
-createGrid();
