@@ -20,5 +20,19 @@ function createGrid() {
         }
     }
 }
+// Working on Button
+function sizeButton() {
 
+    if (btnClicked) {
+        prompt(gridInput);
+        gridSize = prompt;
+        console.log('GS', gridSize, 'btn click');
 
+    }
+}
+const sizeBtn = document.querySelector('.size');
+sizeBtn.addEventListener('click', sizeButton);
+createGrid();
+// end of Button
+
+createGrid();
