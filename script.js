@@ -16,9 +16,19 @@ function createGrid() {
 }
 
 function handleEvent() {
-  gridSize = prompt(gridInput);
-  totalElements = gridSize * gridSize;
+  let inputValid = false;
+  while (!inputValid) {
+    gridSize = prompt(gridInput);
+    if (gridSize >= 1 && gridSize <= 68 && !isNaN(gridSize)) {
+      inputValid = true;
+    }
+    else {
+      alert('ERROR: Input a valid number 1 -68');
+    }
+  }
   console.log('GS', gridSize, 'btn click');
+  totalElements = gridSize * gridSize;
+
   createGrid()
 }
 
