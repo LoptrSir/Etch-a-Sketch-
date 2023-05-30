@@ -8,7 +8,7 @@ function createGrid() {
   for (let i = 0; i < totalElements; i++) {
     const gridElement = document.createElement('div');
     const elementIndex = i + 1;
-    gridElement.innerText = 'div' + elementIndex;
+    gridElement.innerText = elementIndex;
     // unable to find a clean simple way to migrate this to css without allot of code
     gridElement.style.flexBasis = `calc(100% / ${gridSize})`;
     bodyDiv.appendChild(gridElement);
@@ -28,6 +28,8 @@ function handleEvent() {
   }
   console.log('GS', gridSize, 'btn click');
   totalElements = gridSize * gridSize;
+
+//Hover function that changes color of box
 
   createGrid()
 }
