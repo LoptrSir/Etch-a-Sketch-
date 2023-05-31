@@ -1,5 +1,26 @@
 .body {
-display: flex;
+    display: flex;
     flex-wrap: wrap;
+    width: 280px;
+    height: 280px;
+    border: 5px solid black;
+    margin: auto;
 }
 
+/* -set size to space available with a max
+-color change when hovered
+- 10% darker until black
+*/
+
+.body div { 
+    display:flex;  /* why do I need this one when its in ,body above? */
+    border: 1px solid pink;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.body div:hover {
+  background-color: darkred;  
+}
