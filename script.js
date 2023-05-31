@@ -2,8 +2,8 @@ let gridInput = ('How large would you like the grid? Limit 68');
 let gridSize = 8;
 let totalElements = gridSize * gridSize;
 
+const bodyDiv = document.querySelector('.body');
 function createGrid() {
-  const bodyDiv = document.querySelector('.body');
   bodyDiv.innerHTML = '';
   for (let i = 0; i < totalElements; i++) {
     const gridElement = document.createElement('div');
@@ -28,12 +28,15 @@ function handleEvent() {
   }
   console.log('GS', gridSize, 'btn click');
   totalElements = gridSize * gridSize;
-
-//Hover function that changes color of box
-
   createGrid()
-}
+} 
+
+bodyDiv.addEventListener('mouseover', function(event){
+  if (event.target.matches('.body div')) {
+    event.target.style.backgroundColor = 'blue'; // Change the background color to blue 
+}});
 
 FSize.addEventListener('click', handleEvent);
 
 createGrid();
+// stable version
