@@ -15,7 +15,7 @@ function createGrid() {
   }
 }
 
-function handleEvent() {
+FSize.addEventListener('click', function () {
   let inputValid = false;
   while (!inputValid) {
     gridSize = prompt(gridInput);
@@ -29,14 +29,12 @@ function handleEvent() {
   console.log('GS', gridSize, 'btn click');
   totalElements = gridSize * gridSize;
   createGrid()
-} 
+});
 
 bodyDiv.addEventListener('mouseover', function(event){
   if (event.target.matches('.body div')) {
     event.target.style.backgroundColor = 'blue'; // Change the background color to blue 
 }});
 
-FSize.addEventListener('click', handleEvent);
-
 createGrid();
-// stable version
+// stable 5/31 11:50
