@@ -32,11 +32,23 @@ FSize.addEventListener('click', function () {
   createGrid()
 });
 
-// color change function
-bodyDiv.addEventListener('mouseover', function(event){
-  if (event.target.matches('.body div')) {
-    event.target.style.backgroundColor = 'blue'; 
-}});
+// fade to black begin
+function changeColor(e) {
+  if (e.target.matches(".body div")) {
+    const div = e.target;
+    const currentColor = div.style.backgroundColor || getComputedStyle(div).backgroundColor;
+    const newColor = darkenColor(currentColor, .1);
+    div.style.backgroundColor = newColor;
+  }
+}
+
+function darkenColor(color, percentage) {
+  const rgb = color.match(/\d+/g);
+  const newRgb = rgb.map(component => Math.floor(component * (1 - percentage)));
+  return `rgb(${newRgb.join(',')})`
+}
+
+bodyDiv.addEventListener('mouseover', changeColor);
 
 createGrid();
-// stable 5/31 11:50
+// stable 5/31 14:38
