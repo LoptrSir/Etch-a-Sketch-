@@ -7,20 +7,14 @@
     margin: auto;
 }
 
-/* -set size to space available with a max
-- 10% darker until black
-*/
-
-.body div { 
-    display:flex;  /* why do I need this one when its in ,body above? */
+.body div {
+    display: flex;
+    /* why do I need this one when its in ,body above? */
     border: 1px solid pink;
     text-align: center;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    
     background-color: white;
     transition: background-color 0.3s ease;
-    
 }
-

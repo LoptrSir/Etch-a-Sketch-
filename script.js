@@ -4,6 +4,7 @@ let totalElements = gridSize * gridSize;
 
 // Grid generation
 const bodyDiv = document.querySelector('.body');
+
 function createGrid() {
   bodyDiv.innerHTML = '';
   for (let i = 0; i < totalElements; i++) {
@@ -32,7 +33,6 @@ FSize.addEventListener('click', function () {
   createGrid()
 });
 
-// fade to black begin
 function changeColor(e) {
   if (e.target.matches(".body div")) {
     const div = e.target;
